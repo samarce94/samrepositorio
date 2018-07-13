@@ -24,3 +24,9 @@ var falso = false;
 
 console.log(verdadero, falso);
 
+var carro = {
+    color: 'rojo',
+    dobleTraccion: false,
+    puertas: 4
+}
+console.log(carro, carro.color);
