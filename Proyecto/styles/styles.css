@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+#form {
+    display: flex;
+}
+#form .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#form .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#list{
+    list-style: none;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#list li {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#list li:last-of-type {
+    border-bottom: 0;
+}
