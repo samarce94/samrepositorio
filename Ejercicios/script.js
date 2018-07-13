@@ -24,6 +24,11 @@ var falso = false;
 
 console.log(verdadero, falso);
 
+var noDefinido;
+var nulo = null;
+
+console.log(noDefinido, nulo);
+
 var carro = {
     color: 'rojo',
     dobleTraccion: false,
