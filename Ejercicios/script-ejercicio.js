@@ -34,3 +34,20 @@ squareEjercicio.addEventListener('click', function(evento) {
     // 10. Agregar el elemento
     elementoSeleccionado.appendChild(nuevoTexto);
 });
+
+/*
+    Ejercicio: Boton de reinicio:
+        - Al darle click se borra todos los spans
+        - El color se regresa a blanco
+*/
+
+// 1. Obtener boton
+var boton = document.getElementById('reiniciar');
+
+// 2. Agregar evento
+boton.addEventListener('click', function(){
+    // 3. limpiar texto
+    squareEjercicio.innerHTML = '';
+    // 4. limpiar color
+    squareEjercicio.style.background = 'white';
+});
