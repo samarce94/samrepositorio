@@ -6,6 +6,7 @@
 
 // 1. Separar el elemento en una variable
 var squareEjercicio = document.getElementById('square-test');
+var squareLog = document.getElementById('square-log');
 
 // 2. Asignar atributo
 squareEjercicio.setAttribute('data-color', 'red');
@@ -32,5 +33,5 @@ squareEjercicio.addEventListener('click', function(evento) {
     // 9. Agregar el nombre del color
     nuevoTexto.innerHTML = color;
     // 10. Agregar el elemento
-    elementoSeleccionado.appendChild(nuevoTexto);
+    squareLog.appendChild(nuevoTexto);
 });
