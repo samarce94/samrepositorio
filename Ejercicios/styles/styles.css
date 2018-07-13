@@ -7,8 +7,8 @@ h1 {
     justify-content: center;
 }
 
-#square-test,
-#square-ejercicio {
+#square-log,
+#square-test {
     width: 200px;
     height: 200px;
     text-align: center;
@@ -17,8 +17,7 @@ h1 {
     overflow: auto;
 }
 
-#square-test span,
-#square-ejercicio span {
+#square-log span,
+#square-test span {
     display: block;
-    color: white;
 }

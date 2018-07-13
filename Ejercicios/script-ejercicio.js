@@ -6,6 +6,7 @@
 
 // 1. Separar el elemento en una variable
 var squareEjercicio = document.getElementById('square-test');
+var squareLog = document.getElementById('square-log');
 
 // 2. Asignar atributo
 squareEjercicio.setAttribute('data-color', 'red');
@@ -32,7 +33,7 @@ squareEjercicio.addEventListener('click', function(evento) {
     // 9. Agregar el nombre del color
     nuevoTexto.innerHTML = color;
     // 10. Agregar el elemento
-    elementoSeleccionado.appendChild(nuevoTexto);
+    squareLog.appendChild(nuevoTexto);
 });
 
 /*
@@ -47,7 +48,7 @@ var boton = document.getElementById('reiniciar');
 // 2. Agregar evento
 boton.addEventListener('click', function(){
     // 3. limpiar texto
-    squareEjercicio.innerHTML = '';
+    squareLog.innerHTML = '';
     // 4. limpiar color
     squareEjercicio.style.background = 'white';
 });
