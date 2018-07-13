@@ -35,3 +35,39 @@ var carro = {
     puertas: 4
 }
 console.log(carro, carro.color);
+
+var carro0 = {
+    color: 'rojo',
+    dobleTraccion: false,
+    puertas: 4
+}
+var carro1 = {
+    color: 'blanco',
+    dobleTraccion: false,
+    puertas: 2
+}
+var carro2 = {
+    color: 'azul',
+    dobleTraccion: true,
+    puertas: 4
+}
+var carro3 = {
+    color: 'negro',
+    dobleTraccion: false,
+    puertas: 4
+}
+var carro4 = {
+    color: 'verde',
+    dobleTraccion: true,
+    puertas: 2
+}
+
+
+var carros = [carro0, carro1, carro2, carro3];
+console.log(carros.length);
+carros.push(carro4);
+console.log(carros, carros.length);
+
+for(var i = 0; i < carros.length; i++) {
+    console.log(carros[i]);
+}
