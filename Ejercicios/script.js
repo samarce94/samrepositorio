@@ -11,7 +11,11 @@ var valor1 = 2;
 var valor2 = 3;
 var sumaValores = valor1 + valor2;
 
-console.log(sumaValores);
+console.log(sumarValores(valor1, valor2));
+// 1. Una funcion pueden regresar un valor
+function sumarValores(valor1, valor2){
+    return valor1 + valor2;
+}
 
 var texto1 = 'Hola';
 var texto2 = ' Mundo';
@@ -71,3 +75,31 @@ console.log(carros, carros.length);
 for(var i = 0; i < carros.length; i++) {
     console.log(carros[i]);
 }
+
+// 2. las funciones anonimas no tienen un nombre
+
+carros.forEach(function(value) {
+    console.log(value);
+});
+
+// 3. Puedes poner como parametro otra funcion por que son como variables
+
+numeros = [120, 31, 22, 35];
+
+numeros.forEach(function(value, index){
+    numeros[index] = modificar(value, function(valor){
+        return valor / 2;
+    });
+});
+
+function modificar(valor, modificador) {
+    return modificador(valor)
+}
+
+// 4. Podemos reusar nuestras funciones en varias partes
+function desplegarValor(value) {
+    console.log(value);
+}
+
+carros.forEach(desplegarValor);
+numeros.forEach(desplegarValor);
