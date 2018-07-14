@@ -48,7 +48,7 @@ var boton = document.getElementById('reiniciar');
 // 2. Agregar evento
 boton.addEventListener('click', function(){
     // 3. limpiar texto
-    squareLog.innerHTML = '';
+    squareLog.innerText = '';
     // 4. limpiar color
     squareEjercicio.style.background = 'white';
 });

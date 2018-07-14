@@ -22,3 +22,19 @@ boton.addEventListener('click', function(){
         texto.value = '';
     }
 });
+
+texto.addEventListener('keyup', function(evento){
+    console.log(evento);
+    if (evento.key === 'Enter') {
+        // 3. Validar si existe
+        if ( texto.value !== '' ) {
+            // 4. Crear elemento, llenarlo y agregarlo
+            var item = document.createElement('li');
+            item.innerHTML = texto.value;
+            lista.appendChild(item);
+    
+            // 5. Limpiar texto
+            texto.value = '';
+        }
+    }
+});
