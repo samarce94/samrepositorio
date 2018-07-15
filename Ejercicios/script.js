@@ -139,3 +139,34 @@ wtf.addEventListener('click', function() {
 
     resultado.innerText = isNaN(a) + isNaN(b);
 });
+
+// false, 0 , '' son equivalentes
+console.log(false == 0);
+console.log(false == '');
+console.log(0 == '');
+console.log('==================');
+
+// Null y undefined son iguales, pero diferentes a todo lo demas
+console.log(null == undefined);
+console.log(null == false);
+console.log(undefined == 0);
+console.log('==================');
+
+// NaN no es igual a nada mas
+const aNaN = 'a' - 1;
+const bNaN = 'b' - 1;
+console.log(aNaN);
+console.log(bNaN);
+console.log(aNaN == bNaN);
+console.log('==================');
+
+// [] es verdadero pero diferente a true e igual a false
+const arrayVacio = [];
+
+if ([]){
+    console.log('verdadero');
+} else {
+    console.log('falso');
+}
+console.log([] == true);
+console.log([] == false);
