@@ -1,4 +1,4 @@
- 
+/*  
 // getElementById - Nos regresa el elemento dependiendo del ID
 console.log(document.getElementById('square-test'));
  
@@ -102,4 +102,40 @@ function desplegarValor(value) {
 }
 
 carros.forEach(desplegarValor);
-numeros.forEach(desplegarValor);
+numeros.forEach(desplegarValor); */
+
+// 1. Obtener todas las variables
+const inputVal = document.getElementById('inputTxt');
+const restaBtn = document.getElementById('resta');
+const resultado = document.getElementById('resultado');
+const wtf = document.getElementById('wtf');
+
+// 2. Agregar eventListener
+restaBtn.addEventListener('click', function(){
+    // 3. Imprimir resta
+    resultado.innerText = inputVal.value - 1;
+});
+
+// 4. Agregar suma
+const sumaBtn = document.getElementById('suma');
+
+sumaBtn.addEventListener('click', function(){
+    // resultado.innerText = inputVal.value + 1;
+    resultado.innerText = Number(inputVal.value) + 1;
+});
+
+// 5. Brainfuck
+
+wtf.addEventListener('click', function() {
+    // Declaramos un string que no puede ser convertido
+    const a = 'a';
+    const b = 'b';
+
+    // Si algo que no puede ser convertido se aplica una operación regresa un NaN
+    // resultado.innerText = a - 1;
+
+    // Se puede usar un isNaN para validar
+    // resultado.innerText = isNaN(a);
+
+    resultado.innerText = isNaN(a) + isNaN(b);
+});
