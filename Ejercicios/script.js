@@ -173,6 +173,7 @@ console.log([] == true);
 console.log([] == false);
 */
 
+/*
 console.log(42 == '42');
 console.log(42 === '42');
 
@@ -181,3 +182,13 @@ console.log(1 === true);
 
 console.log('true' == true);
 console.log('true' === true);
+*/
+
+console.log(true && true);
+console.log(true && false);
+
+console.log(false || false);
+console.log(false || true);
+
+console.log(!false, !true);
+
