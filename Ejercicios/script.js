@@ -104,6 +104,7 @@ function desplegarValor(value) {
 carros.forEach(desplegarValor);
 numeros.forEach(desplegarValor); */
 
+/*
 // 1. Obtener todas las variables
 const inputVal = document.getElementById('inputTxt');
 const restaBtn = document.getElementById('resta');
@@ -139,6 +140,7 @@ wtf.addEventListener('click', function() {
 
     resultado.innerText = isNaN(a) + isNaN(b);
 });
+*/
 
 /*
 // false, 0 , '' son equivalentes
@@ -184,11 +186,57 @@ console.log('true' == true);
 console.log('true' === true);
 */
 
+/*
 console.log(true && true);
 console.log(true && false);
 
 console.log(false || false);
 console.log(false || true);
 
-console.log(!false, !true);
+console.log(!false, !true);*/
 
+/* Ejercicio: Hacer un validador de contraseñas 
+    - Una contraseña tiene que tener un numero o una mayuscula y  una longitod mayor a 3 y menoro  igual a 8
+*/
+
+// 1. Agregar elementos
+const pass = document.getElementById('inputTxt');
+const resultado = document.getElementById('resultado');
+
+// 2. Agregar boleanos de comparacion
+let hasNumber = false;
+let hasUppercase = false;
+
+// 3. Agregar listener
+pass.addEventListener('keyup', function(evento) {
+    // 4. Obtenemos el caracter actual
+    const currentChar = evento.key;
+
+    // 5. El caracter es un numero?
+    if ( !isNaN(currentChar) ) {
+        // 6. actualiza booleano de comparacion
+        hasNumber = true;
+    } else {
+        // 7. El caracter es una mayuscula?
+        if ( currentChar === currentChar.toUpperCase() ){
+            // 8. Actualiza el booleano de comparacion
+            hasUppercase = true;
+        }
+    }
+
+    // 9. Tiene una mayuscla o un numero?
+    if (hasNumber || hasUppercase) {
+        // 10. La longitud es entre 3 y 8? 
+        if (pass.value.length > 3 && pass.value.length <= 8) {
+            // 11. Aprobar
+            resultado.innerText = 'Aprobada';
+        } else {
+            // 12. Rechazar
+            resultado.innerText = 'Rechazada';
+        }
+    } else {
+        // 13. Rechazar
+        resultado.innerText = 'Rechazada';
+    }
+
+});
