@@ -30,6 +30,11 @@ h1 {
     border-bottom: 1px solid #ccc;
 }
 
+#list li.done {
+    text-decoration: line-through;
+}
+
+
 #list li:last-of-type {
     border-bottom: 0;
 }
