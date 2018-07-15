@@ -195,7 +195,101 @@ console.log(false || true);
 
 console.log(!false, !true);*/
 
-/* Ejercicio: Hacer un validador de contraseñas 
-    - Una contraseña tiene que tener un numero o una mayuscula y  una longitod mayor a 3 y menoro  igual a 8
+/* Ejercicio: Validar el array alumnos: 
+    - Si el alumno tiene un promedio menor a 6 poner su nombre en la lista de Reprobados
+    - Si el alumno tiene un promedio mayor a 6 y menor a 8 poner su nombre en la lista de Asesorias
+    - Si el alumno tiene un promedio mayor a 8 o es destacado poner su nombre en la lista de Becados
+    - Un Alumno reprobado no puede ser destacado.
 */
 
+const alumnos = [
+  {
+    nombre: "Odonnell",
+    promedio: 1,
+    destacado: true
+  },
+  {
+    nombre: "Decker",
+    promedio: 65,
+    destacado: false
+  },
+  {
+    nombre: "Frances",
+    promedio: 11,
+    destacado: false
+  },
+  {
+    nombre: "Natalie",
+    promedio: 10,
+    destacado: false
+  },
+  {
+    nombre: "Cleveland",
+    promedio: 47,
+    destacado: true
+  },
+  {
+    nombre: "Acevedo",
+    promedio: 11,
+    destacado: false
+  },
+  {
+    nombre: "Klein",
+    promedio: 68,
+    destacado: true
+  },
+  {
+    nombre: "Keisha",
+    promedio: 80,
+    destacado: true
+  },
+  {
+    nombre: "Stella",
+    promedio: 48,
+    destacado: false
+  },
+  {
+    nombre: "Obrien",
+    promedio: 67,
+    destacado: true
+  }
+];
+
+// 1. Obtener elementos
+const calcBtn = document.getElementById('calcular');
+const reprobados = document.getElementById('reprobados');
+const asesorias = document.getElementById('asesorias');
+const becados = document.getElementById('becados');
+
+// 2. Agregar Listener
+calcBtn.addEventListener('click', function() {
+    // 3. Recorrer array
+    alumnos.forEach(function(alumno){
+
+        // 4. El alumno tiene promedio menor o igual a 60
+        if (alumno.promedio <= 60) {
+            // 5. Agregar a reprobados
+            agregarALista(alumno, reprobados)
+        } else {
+            // 6. Tiene promedio mayor a 60 y menor o igual a 80
+            if (alumno.promedio > 60 && alumno.promedio <= 80) {                
+                // 7. Agregar a asesorias
+                agregarALista(alumno, asesorias)
+            }
+            // 8. Tiene promedio mayor a 80 o es destacado
+            if (alumno.promedio > 80 || alumno.destacado) {
+                // 9. Agregar becas
+                agregarALista(alumno, becados)
+            }
+        }
+        
+    });
+});
+
+// 10. Asegura poder duplicar nodos.
+function agregarALista(alumno, lista){
+    const elementoAlumno = document.createElement('li');
+    elementoAlumno.innerText = alumno.nombre;
+
+    lista.appendChild(elementoAlumno);
+}
