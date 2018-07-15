@@ -140,6 +140,7 @@ wtf.addEventListener('click', function() {
     resultado.innerText = isNaN(a) + isNaN(b);
 });
 
+/*
 // false, 0 , '' son equivalentes
 console.log(false == 0);
 console.log(false == '');
@@ -170,3 +171,13 @@ if ([]){
 }
 console.log([] == true);
 console.log([] == false);
+*/
+
+console.log(42 == '42');
+console.log(42 === '42');
+
+console.log(1 == true);
+console.log(1 === true);
+
+console.log('true' == true);
+console.log('true' === true);
