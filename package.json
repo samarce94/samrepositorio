@@ -1,0 +1,25 @@
+{
+  "name": "js-academy",
+  "version": "1.0.0",
+  "description": "Este ejercicio ayudara a repasar los skills de JS y los temas vistos en la academia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/VictorQ/js-academy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/VictorQ/js-academy/issues"
+  },
+  "homepage": "https://gitlab.com/VictorQ/js-academy#README",
+  "scripts":{
+    "start": "json-server --watch db.json --static ./ejercicios"
+  },
+  "devDependencies": {
+    "json-server": "^0.14.0"
+  }
+}

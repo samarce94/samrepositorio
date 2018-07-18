@@ -1,5 +1,5 @@
-/* 
-    Ejercicio: Cada que se clique el cuadro: 
+/*
+    Ejercicio: Cada que se clique el cuadro:
         - Switchear el color entre rojo y azul
         - Agregar dentro del cuadro el nombre del color anterior.
 */
@@ -17,17 +17,17 @@ squareEjercicio.addEventListener('click', function(evento) {
     var elementoSeleccionado = evento.target;
     // 5. Obtener color guardado
     var color = elementoSeleccionado.getAttribute('data-color');
-    
+
     // 6. Asignar el color de fondo
     elementoSeleccionado.style.background = color;
-    
+
     // 7. validamos el color
     if (color === 'red') {
         elementoSeleccionado.setAttribute('data-color', 'blue');
     } else {
         elementoSeleccionado.setAttribute('data-color', 'red');
     }
-    
+
     // 8. Crear un elemento virtual
     var nuevoTexto = document.createElement('span');
     // 9. Agregar el nombre del color
